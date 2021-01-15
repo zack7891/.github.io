@@ -13,24 +13,7 @@ comments: true
 
   gtag('config', 'G-86HNEGBVEL');
 </script>
-<!-- Pagination links -->
-<div >
-	{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path }}" >
-		Previous
-		</a>
-	{% else %}
-		<span>Previous</span>
-	{% endif %}
-	| <span class="page_number ">
-		Page: {{ paginator.page }} of {{ paginator.total_pages }}
-	</span> | 
-	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path }}" >Next</a>
-	{% else %}
-		<span >Next</span>
-	{% endif %}
-</div>
+
 <div>
 	<p> <a href="https://zack7891.github.io/ForestFires-Visual-Analysis/">Brazil Forest Fires in R</a> 
 	</p>
@@ -58,4 +41,22 @@ comments: true
 
 	</div>
 	{% endfor %}
+</div>
+<!-- Pagination links -->
+<div >
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path }}" >
+		Previous
+		</a>
+	{% else %}
+		<span>Previous</span>
+	{% endif %}
+	| <span class="page_number ">
+		Page: {{ paginator.page }} of {{ paginator.total_pages }}
+	</span> | 
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path }}" >Next</a>
+	{% else %}
+		<span >Next</span>
+	{% endif %}
 </div>
